@@ -29,8 +29,7 @@ model Project {
   createdAt   DateTime @default(now())
 
   userId      String   @db.Uuid  // Ensure UUID type
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)  // ✅ Use "Cascade" with uppercase
-
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   tasks       Task[]
 
   @@map("projects")
@@ -45,10 +44,10 @@ model Task {
   status        TaskStatus
   createdAt      DateTime @default(now())
 
-  assignedUserId String   @db.Uuid  // ✅ Ensure UUID type
+  assignedUserId String   @db.Uuid  
   assignedUser   User     @relation("UserAssignedTasks", fields: [assignedUserId], references: [id], onDelete: Cascade)
 
-  projectId      String   @db.Uuid  // ✅ Ensure UUID type
+  projectId      String   @db.Uuid 
   project        Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
 
   @@map("tasks")

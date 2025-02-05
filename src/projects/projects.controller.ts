@@ -43,7 +43,7 @@ export class ProjectsController {
   // Delete a project
   @Delete(':id')
   @UseGuards(JwtAuthGuard) // Protect the route with JWT guard
-  async remove(@Param('id') id: string): Promise<void> {
+  async remove(@Param('id')id: string): Promise<void> {
     return this.projectsService.remove(id);
   }
 }

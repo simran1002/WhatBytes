@@ -20,6 +20,26 @@ export class TasksController {
     return this.tasksService.create(createTaskDto);
   }
 
+  @Get('filter')
+  async filter(
+    @Query('status') status: string,
+    @Query('assignedUserId') assignedUserId: string,
+  ): Promise<TaskResponseDto[]> {
+    const where = {} as any;
+
+    if (status) {
+      where.status = status;
+    }
+
+    if (assignedUserId) {
+      where.assignedUserId = assignedUserId;
+    }
+
+    return this.prisma.task.findMany({
+      where,
+    });
+  }
+
   @Get()
   async findAll(): Promise<TaskResponseDto[]> {
     return this.tasksService.findAll();
@@ -50,23 +70,5 @@ export class TasksController {
     return this.tasksService.remove(id);
   }
 
-  @Get('filter')
-  async filter(
-    @Query('status') status: string,
-    @Query('assignedUserId') assignedUserId: string,
-  ): Promise<TaskResponseDto[]> {
-    const where = {} as any;
-
-    if (status) {
-      where.status = status;
-    }
-
-    if (assignedUserId) {
-      where.assignedUserId = assignedUserId;
-    }
-
-    return this.prisma.task.findMany({
-      where,
-    });
-  }
+  
 }

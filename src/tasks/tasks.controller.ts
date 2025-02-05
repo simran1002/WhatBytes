@@ -11,7 +11,7 @@ import { PrismaService } from '../prisma/prisma.service';
 export class TasksController {
   constructor(
     private readonly tasksService: TasksService,
-    private readonly prisma: PrismaService,
+    private readonly prisma: PrismaService
   ) {}
 
   @Post()

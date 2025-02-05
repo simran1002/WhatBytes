@@ -2,7 +2,7 @@ import { Controller, Post, Get, Put, Delete, Body, Param } from '@nestjs/common'
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { UserResponseDto } from './dto/user-response.dto';
+import { UserResponse, UserResponseDto } from './dto/user-response.dto';
 import { UseGuards } from '@nestjs/common';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
@@ -30,8 +30,13 @@ export class UsersController {
   async update(
     @Param('id') id: string,
     @Body() updateUserDto: UpdateUserDto,
-  ): Promise<UserResponseDto> {
-    return this.usersService.update(id, updateUserDto);
+  ): Promise<UserResponse> {
+    const user=this.usersService.update(id, updateUserDto);
+    return {
+      success:"True",
+      message:"User updated successfully",
+    }
+
   }
 
   @Delete(':id')

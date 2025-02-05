@@ -10,10 +10,15 @@ datasource db {
 model User {
   id        String   @id @default(uuid()) @db.Uuid
   name      String
+  password  String
   email     String   @unique
   createdAt DateTime @default(now())
+
   tasks     Task[]   @relation("UserAssignedTasks")
   projects  Project[]
+
+  // Optional: Cascade deletion of associated projects and tasks when a user is deleted
+  @@map("users")
 }
 
 model Project {
@@ -22,21 +27,31 @@ model Project {
   description String
   status      ProjectStatus
   createdAt   DateTime @default(now())
-  userId      String
-  user        User     @relation(fields: [userId], references: [id])
+
+  userId      String   @db.Uuid  // Ensure UUID type
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)  // ✅ Use "Cascade" with uppercase
+
   tasks       Task[]
+
+  @@map("projects")
 }
+
+
 
 model Task {
   id             String   @id @default(uuid()) @db.Uuid
   title          String
   description    String
-  status         TaskStatus
+  status        TaskStatus
   createdAt      DateTime @default(now())
-  assignedUserId String
-  assignedUser   User     @relation("UserAssignedTasks", fields: [assignedUserId], references: [id])
-  projectId      String
-  project        Project  @relation(fields: [projectId], references: [id])
+
+  assignedUserId String   @db.Uuid  // ✅ Ensure UUID type
+  assignedUser   User     @relation("UserAssignedTasks", fields: [assignedUserId], references: [id], onDelete: Cascade)
+
+  projectId      String   @db.Uuid  // ✅ Ensure UUID type
+  project        Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+
+  @@map("tasks")
 }
 
 enum ProjectStatus {

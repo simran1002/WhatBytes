@@ -22,14 +22,12 @@ export class TasksService {
     return await this.prisma.task.findMany();
   }
 
-  // Get tasks by project ID
   async findByProject(projectId: string): Promise<TaskResponseDto[]> {
     return await this.prisma.task.findMany({
       where: { projectId },
     });
   }
 
-  // Get a task by ID
   async findOne(id: string): Promise<TaskResponseDto> {
     const task = await this.prisma.task.findUnique({
       where: { id },
@@ -42,7 +40,6 @@ export class TasksService {
     return task;
   }
 
-  // Update task details
   async update(
     id: string,
     updateTaskDto: UpdateTaskDto,
@@ -55,7 +52,6 @@ export class TasksService {
     return task;
   }
 
-  // Delete a task
   async remove(id: string): Promise<void> {
     await this.prisma.task.delete({
       where: { id },

@@ -5,7 +5,7 @@ export class TaskResponseDto {
     description: string;
     status: string;
     createdAt: Date;
-    updatedAt: Date;
+    updatedAt?: Date;
     projectId: string;
     assignedUserId: string;
   }

@@ -4,4 +4,9 @@ export class UserResponseDto {
     email: string;
     createdAt: Date;
   }
+
+export interface UserResponse {
+  message: string;
+  success: string;
+}
   

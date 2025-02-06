@@ -1,0 +1,1298 @@
+{
+	"info": {
+		"_postman_id": "45579d99-961e-4713-b0d4-603350b3254f",
+		"name": "WhatBytes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24106690"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"prakhar@example.com\",\r\n  \"password\": \"prakhar123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"prakhar@example.com\",\r\n  \"password\": \"prakhar123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "147"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"93-cOZYvZA9HaN4xxhoMNFHps6t4ok\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 16:48:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3Mzg3NzQxMzksImV4cCI6MTczODc3NzczOX0.Q0TQDxw1Owgr3iKJdMExxmadcRq8eydv1AtK5DoLbSI\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "USERS",
+			"item": [
+				{
+					"name": "CREATE USER",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3Mzg3Nzg0NDYsImV4cCI6MTczODc4MjA0Nn0.M7kMBX-QhTillFk3z5GPHZUezb9czZm9MpdIWtsenCo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Simran12\",\r\n    \"password\": \"simran123\",\r\n    \"email\": \"simran12@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CREATE USER",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Simran12\",\r\n    \"password\": \"simran123\",\r\n    \"email\": \"simran12@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/users",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "205"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cd-VYER+bBkwzD+Hj8ZxCLJriuWuKY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 19:24:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"ef087524-7745-4d74-be6f-bac5ed37e653\",\n    \"name\": \"Simran12\",\n    \"password\": \"$2a$10$vQrZps6vq1iDBwVU.zjeauQdk7OjCJJf7etGHGAr/b2rqOqNKy4Mi\",\n    \"email\": \"simran12@gmail.com\",\n    \"createdAt\": \"2025-02-05T19:24:58.502Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GET ALL USERS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/users",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "177"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b1-qy1VqqYQatEB7wjU1EWUE4lXQuE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 18:03:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6a0995cc-62d6-4914-bc16-8e49d3ce8558\",\n        \"name\": \"Prakhar Maheshwari\",\n        \"password\": \"simran123\",\n        \"email\": \"prakharmaheshwari13@gmail.com\",\n        \"createdAt\": \"2025-02-05T18:01:08.468Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET USER",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/users/6a0995cc-62d6-4914-bc16-8e49d3ce8558",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"6a0995cc-62d6-4914-bc16-8e49d3ce8558"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/users",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "177"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b1-qy1VqqYQatEB7wjU1EWUE4lXQuE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 18:03:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6a0995cc-62d6-4914-bc16-8e49d3ce8558\",\n        \"name\": \"Prakhar Maheshwari\",\n        \"password\": \"simran123\",\n        \"email\": \"prakharmaheshwari13@gmail.com\",\n        \"createdAt\": \"2025-02-05T18:01:08.468Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "UPDATE USER",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3Mzg3Nzg0NDYsImV4cCI6MTczODc4MjA0Nn0.M7kMBX-QhTillFk3z5GPHZUezb9czZm9MpdIWtsenCo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"PAPPU PAZER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/6a0995cc-62d6-4914-bc16-8e49d3ce8558",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"6a0995cc-62d6-4914-bc16-8e49d3ce8558"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"PAPPU PAZER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/users/6a0995cc-62d6-4914-bc16-8e49d3ce8558",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"users",
+										"6a0995cc-62d6-4914-bc16-8e49d3ce8558"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38-3qBGrP8TMF6tmfGWde3w5g+fhLM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 18:12:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": \"True\",\n    \"message\": \"User updated successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "TASKS",
+			"item": [
+				{
+					"name": "CREATE TASK",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3Mzg3Nzg0NDYsImV4cCI6MTczODc4MjA0Nn0.M7kMBX-QhTillFk3z5GPHZUezb9czZm9MpdIWtsenCo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Testing\",\r\n    \"description\":\"Partial test\",\r\n    \"status\":\"TODO\",\r\n    \"projectId\":\"67e0feff-f13f-4e12-9d73-a98c7e5bc91e\",\r\n    \"assignedUserId\":\"b10fcbc5-6ad9-41c6-bf96-89086a029cbb\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"Testing\",\r\n    \"description\":\"Partial test\",\r\n    \"status\":\"TODO\",\r\n    \"projectId\":\"67e0feff-f13f-4e12-9d73-a98c7e5bc91e\",\r\n    \"assignedUserId\":\"b10fcbc5-6ad9-41c6-bf96-89086a029cbb\"\r\n\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/tasks",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "254"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fe-XfQRE6xRCYgKj656AjybV+FExGA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 18:54:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"25fb476e-a1bd-4562-afe5-268b134d4c28\",\n    \"title\": \"Testing\",\n    \"description\": \"Partial test\",\n    \"status\": \"TODO\",\n    \"createdAt\": \"2025-02-05T18:54:39.783Z\",\n    \"assignedUserId\": \"b10fcbc5-6ad9-41c6-bf96-89086a029cbb\",\n    \"projectId\": \"67e0feff-f13f-4e12-9d73-a98c7e5bc91e\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GET TASKS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tasks",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "CREATE TASK Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/tasks",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "256"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"100-ooCyTOFnC2TwER4vWm/Ecy4krEs\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 18:54:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"25fb476e-a1bd-4562-afe5-268b134d4c28\",\n        \"title\": \"Testing\",\n        \"description\": \"Partial test\",\n        \"status\": \"TODO\",\n        \"createdAt\": \"2025-02-05T18:54:39.783Z\",\n        \"assignedUserId\": \"b10fcbc5-6ad9-41c6-bf96-89086a029cbb\",\n        \"projectId\": \"67e0feff-f13f-4e12-9d73-a98c7e5bc91e\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET  TASK BY  PROJECT ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tasks/project/67e0feff-f13f-4e12-9d73-a98c7e5bc91e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"project",
+								"67e0feff-f13f-4e12-9d73-a98c7e5bc91e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET TASK Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/tasks/project/67e0feff-f13f-4e12-9d73-a98c7e5bc91e",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"tasks",
+										"project",
+										"67e0feff-f13f-4e12-9d73-a98c7e5bc91e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "511"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ff-c4AIPBzu3CcifzZSEBuJLWrG9KM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 18:57:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"25fb476e-a1bd-4562-afe5-268b134d4c28\",\n        \"title\": \"Testing\",\n        \"description\": \"Partial test\",\n        \"status\": \"TODO\",\n        \"createdAt\": \"2025-02-05T18:54:39.783Z\",\n        \"assignedUserId\": \"b10fcbc5-6ad9-41c6-bf96-89086a029cbb\",\n        \"projectId\": \"67e0feff-f13f-4e12-9d73-a98c7e5bc91e\"\n    },\n    {\n        \"id\": \"531fd5c8-0bb0-4d20-bcd4-772905a7449c\",\n        \"title\": \"Testing\",\n        \"description\": \"Partial test\",\n        \"status\": \"TODO\",\n        \"createdAt\": \"2025-02-05T18:56:06.308Z\",\n        \"assignedUserId\": \"b10fcbc5-6ad9-41c6-bf96-89086a029cbb\",\n        \"projectId\": \"67e0feff-f13f-4e12-9d73-a98c7e5bc91e\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET  TASK BY  ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tasks/25fb476e-a1bd-4562-afe5-268b134d4c28",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"25fb476e-a1bd-4562-afe5-268b134d4c28"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "GET  TASK BY  PROJECT ID Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/tasks/25fb476e-a1bd-4562-afe5-268b134d4c28",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"tasks",
+										"25fb476e-a1bd-4562-afe5-268b134d4c28"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "254"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fe-XfQRE6xRCYgKj656AjybV+FExGA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 18:59:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"25fb476e-a1bd-4562-afe5-268b134d4c28\",\n    \"title\": \"Testing\",\n    \"description\": \"Partial test\",\n    \"status\": \"TODO\",\n    \"createdAt\": \"2025-02-05T18:54:39.783Z\",\n    \"assignedUserId\": \"b10fcbc5-6ad9-41c6-bf96-89086a029cbb\",\n    \"projectId\": \"67e0feff-f13f-4e12-9d73-a98c7e5bc91e\"\n}"
+						}
+					]
+				},
+				{
+					"name": "FILTER",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/tasks/filter/?status=DONE&assignedUserId",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"filter",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "DONE"
+								},
+								{
+									"key": "assignedUserId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "FILTER",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/tasks/filter/?status=DONE&assignedUserId",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"tasks",
+										"filter",
+										""
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "DONE"
+										},
+										{
+											"key": "assignedUserId",
+											"value": null
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "256"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"100-rdnD3EjTgBjD8SuSlqFARb5A4m0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 19:14:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"25fb476e-a1bd-4562-afe5-268b134d4c28\",\n        \"title\": \"Testing\",\n        \"description\": \"Partial test\",\n        \"status\": \"DONE\",\n        \"createdAt\": \"2025-02-05T18:54:39.783Z\",\n        \"assignedUserId\": \"b10fcbc5-6ad9-41c6-bf96-89086a029cbb\",\n        \"projectId\": \"67e0feff-f13f-4e12-9d73-a98c7e5bc91e\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "UPDATE  BY Task ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3Mzg3ODIxNDYsImV4cCI6MTczODc4NTc0Nn0.-WsF9UQ9LGX4Udv7BJ_CRD4WOSGIQvF5aj2hiKIIPx0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"DONE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/tasks/25fb476e-a1bd-4562-afe5-268b134d4c28",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"tasks",
+								"25fb476e-a1bd-4562-afe5-268b134d4c28"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PROJECTS",
+			"item": [
+				{
+					"name": "Create a new project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3Mzg3Nzg0NDYsImV4cCI6MTczODc4MjA0Nn0.M7kMBX-QhTillFk3z5GPHZUezb9czZm9MpdIWtsenCo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Project A\",\r\n  \"description\": \"This is my first project\",\r\n  \"status\":\"PLANNED\",\r\n  \"userId\": \"6a0995cc-62d6-4914-bc16-8e49d3ce8558\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/projects",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PROJECTS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3Mzg3Nzg0NDYsImV4cCI6MTczODc4MjA0Nn0.M7kMBX-QhTillFk3z5GPHZUezb9czZm9MpdIWtsenCo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Project A\",\r\n  \"description\": \"This is my first project\",\r\n  \"status\":\"PLANNED\",\r\n  \"userId\": \"6a0995cc-62d6-4914-bc16-8e49d3ce8558\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/projects",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PROJECT",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3Mzg3Nzg0NDYsImV4cCI6MTczODc4MjA0Nn0.M7kMBX-QhTillFk3z5GPHZUezb9czZm9MpdIWtsenCo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Project A\",\r\n  \"description\": \"This is my first project\",\r\n  \"status\":\"PLANNED\",\r\n  \"userId\": \"6a0995cc-62d6-4914-bc16-8e49d3ce8558\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/projects/67e0feff-f13f-4e12-9d73-a98c7e5bc91e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"projects",
+								"67e0feff-f13f-4e12-9d73-a98c7e5bc91e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create a new project Copy",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Project A\",\r\n  \"description\": \"This is my first project\",\r\n  \"status\":\"PLANNED\",\r\n  \"userId\": \"6a0995cc-62d6-4914-bc16-8e49d3ce8558\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/projects/67e0feff-f13f-4e12-9d73-a98c7e5bc91e",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"projects",
+										"67e0feff-f13f-4e12-9d73-a98c7e5bc91e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "211"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d3-sP3q/Lny1Z6wn3Ta38pduiy643w\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 18:45:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"67e0feff-f13f-4e12-9d73-a98c7e5bc91e\",\n    \"name\": \"Project A\",\n    \"description\": \"This is my first project\",\n    \"status\": \"PLANNED\",\n    \"createdAt\": \"2025-02-05T18:40:15.470Z\",\n    \"userId\": \"6a0995cc-62d6-4914-bc16-8e49d3ce8558\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE PROJECT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3Mzg3Nzg0NDYsImV4cCI6MTczODc4MjA0Nn0.M7kMBX-QhTillFk3z5GPHZUezb9czZm9MpdIWtsenCo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Project 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/projects/67e0feff-f13f-4e12-9d73-a98c7e5bc91e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"projects",
+								"67e0feff-f13f-4e12-9d73-a98c7e5bc91e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Project 1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/projects/67e0feff-f13f-4e12-9d73-a98c7e5bc91e",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"projects",
+										"67e0feff-f13f-4e12-9d73-a98c7e5bc91e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "211"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d3-+hvDT6Gj1/JO/s/U5mjYRFWJfYE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 18:50:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"67e0feff-f13f-4e12-9d73-a98c7e5bc91e\",\n    \"name\": \"Project 1\",\n    \"description\": \"This is my first project\",\n    \"status\": \"PLANNED\",\n    \"createdAt\": \"2025-02-05T18:40:15.470Z\",\n    \"userId\": \"6a0995cc-62d6-4914-bc16-8e49d3ce8558\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE PROJECT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3Mzg3Nzg0NDYsImV4cCI6MTczODc4MjA0Nn0.M7kMBX-QhTillFk3z5GPHZUezb9czZm9MpdIWtsenCo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Project 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/projects/67e0feff-f13f-4e12-9d73-a98c7e5bc91e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"projects",
+								"67e0feff-f13f-4e12-9d73-a98c7e5bc91e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Project 1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/projects/67e0feff-f13f-4e12-9d73-a98c7e5bc91e",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"projects",
+										"67e0feff-f13f-4e12-9d73-a98c7e5bc91e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "211"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d3-+hvDT6Gj1/JO/s/U5mjYRFWJfYE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Feb 2025 18:50:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"67e0feff-f13f-4e12-9d73-a98c7e5bc91e\",\n    \"name\": \"Project 1\",\n    \"description\": \"This is my first project\",\n    \"status\": \"PLANNED\",\n    \"createdAt\": \"2025-02-05T18:40:15.470Z\",\n    \"userId\": \"6a0995cc-62d6-4914-bc16-8e49d3ce8558\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
